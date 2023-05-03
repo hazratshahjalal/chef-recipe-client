@@ -1,0 +1,11 @@
+import React from 'react';
+
+const Recipes = () => {
+  return (
+    <div>
+      <h1>Recipes recipes</h1>
+    </div>
+  );
+};
+
+export default Recipes; <h1>Recipes recipes</h1>
