@@ -1,0 +1,30 @@
+.banner-image {
+  background-image: url("../../assets/banner.jpg");
+  padding: 6em 0 8em 0;
+  text-align: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.banner-text h2 {
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  padding: 0.5em 0 0 0;
+}
+
+.banner-text p {
+  color: #000000;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 1em 0 0 0;
+  line-height: 1em;
+  letter-spacing: 1.5px;
+  padding: 0 0 1em 0;
+}
