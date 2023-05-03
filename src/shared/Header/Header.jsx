@@ -1,15 +1,17 @@
 import React from 'react';
 import "./Header.css"
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Header = () => {
   return (
     <div>
-
+      {/* Navigation Bar */}
       <Navbar bg="success" variant="dark">
         <Container>
+          {/* Logo */}
           <h3 className='text-white d-flex items-center justify-content-center'> <a href="/">Mister Kitchen</a> </h3>
+          {/* Navigation Links */}
           <Nav className="mx-auto">
             <Nav.Item className='d-flex'>
               <Link className='text-dark' to="/blogs">Home</Link>
@@ -17,7 +19,7 @@ const Header = () => {
               <Nav.Link href="blogs">Blogs</Nav.Link>
             </Nav.Item>
           </Nav>
-          {/* <button className='btn btn-light'>Sign Up</button> */}
+          {/* Login Button */}
           <button className='btn btn-light ms-3'> <Link className='text-success' to='/login'>Login</Link> </button>
         </Container>
       </Navbar>

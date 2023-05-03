@@ -1,14 +1,16 @@
 import React from 'react';
-import Menu from '../../components/Menu/Menu';
+import Banner from '../../components/Banner/Banner';
+import ContactUs from '../../components/ContactUs/ContactUs';
+import AboutUs from '../../components/AboutUs/AboutUs';
 
 
 const Home = () => {
   return (
     <div>
+      <Banner></Banner>
 
-      <h1 className='text-danger'>This is home this is home  HOme</h1>
-
-      <Menu></Menu>
+      <ContactUs></ContactUs>
+      <AboutUs></AboutUs>
     </div>
   );
 };
