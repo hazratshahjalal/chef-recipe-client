@@ -1,5 +1,4 @@
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faGolfBall } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Alert, Button, Col, Form, Row } from 'react-bootstrap';

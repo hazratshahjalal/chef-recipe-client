@@ -1,9 +1,17 @@
 import React from 'react';
 import "./Blogs.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload, } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const Blogs = () => {
+
   return (
     <div className="bg-white py-20">
+      {
+        <div className="text-center text-dark"><button className='btn btn-outline-sucess text-success'> <FontAwesomeIcon icon={faDownload} className="mx-2" />Download PDF</button></div>
+      }
       <div class="m mx-auto px-20">
         <h2 class="text-[#1A2952] leading-normal sm:text-3xl xsm:text-xl md:text-4xl lg:text-6xl text-center font-bold mb-5">
           My Blogs

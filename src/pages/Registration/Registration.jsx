@@ -26,6 +26,7 @@ const Registration = () => {
             placeholder="Enter your name"
             value={name}
             onChange={(event) => setName(event.target.value)}
+            required
           />
         </Form.Group>
 
@@ -36,6 +37,7 @@ const Registration = () => {
             placeholder="Enter email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
+            required
           />
         </Form.Group>
 
@@ -46,6 +48,7 @@ const Registration = () => {
             placeholder="Password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
+            required
           />
         </Form.Group>
 

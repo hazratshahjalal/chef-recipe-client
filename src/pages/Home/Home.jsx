@@ -20,6 +20,8 @@ const Home = () => {
 
 
   const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState([]);
+
   useEffect(() => {
     // Set loading state to true
     setIsLoading(true);
@@ -35,37 +37,44 @@ const Home = () => {
   }, []);
 
 
+
   return (
     <div>
       <Banner></Banner>
 
-      <div className="chef-card-container">
-        <h2 className="chef-heading">Meet Our <span className="text-warning">Chefs</span></h2>
-        <Row>
-          {chefs.map(chef => (
-            <Col sm={12} md={6} lg={4} className="chef-card-col">
-              <Card className="chef-card">
-                <Card.Img variant="top" src={chef.picture} />
-                <Card.Body>
-                  <Card.Title className="chef-name text-success">{chef.name}</Card.Title>
-                  <Card.Header >{chef.bio}</Card.Header>
-                  <Card.Text className="chef-card-text">
-                    <span className="chef-detail">Years of Experience:</span> {chef.experience}
-                    <br />
-                    <span className="chef-detail">Number of Recipes:</span> {chef.numRecipes}
-                    <br />
-                    <span className="chef-detail">Likes:</span > <span className='text-success'>  {chef.likes}</span>
-                  </Card.Text>
-                  <Button variant="outline-success"><Link to={`/recipes/${chef.id}`} className='text-warning'>View Recipes</Link></Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+      {isLoading ? (
+        <div className="d-flex justify-content-center">
+          <Spinner animation="border" variant="warning" />
+        </div>
+      ) : (
+        <div className="chef-card-container">
+          <h2 className="chef-heading">Meet Our <span className="text-warning">Chefs</span></h2>
+          <Row>
+            {chefs.map(chef => (
+              <Col sm={12} md={6} lg={4} className="chef-card-col">
+                <Card className="chef-card">
+                  <Card.Img variant="top" src={chef.picture} />
+                  <Card.Body>
+                    <Card.Title className="chef-name text-success">{chef.name}</Card.Title>
+
+                    <Card.Text className="chef-card-text">
+                      <span className="chef-detail">Years of Experience:</span> {chef.experience}
+                      <br />
+                      <span className="chef-detail">Number of Recipes:</span> {chef.numRecipes}
+                      <br />
+                      <span className="chef-detail">Likes:</span > <span className='text-success'>  {chef.likes}</span>
+                    </Card.Text>
+                    <Button variant="outline-success"><Link to={`/recipes/${chef.id}`} className='text-warning'>View Recipes</Link></Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      )}
 
 
-      </div>
-      {isLoading && <Spinner animation="border" variant="primary" />}
+
 
 
 
