@@ -5,37 +5,50 @@ const Blogs = () => {
     <div className="bg-white py-20">
       <div class="m mx-auto px-20">
         <h2 class="text-[#1A2952] leading-normal sm:text-3xl xsm:text-xl md:text-4xl lg:text-6xl text-center font-bold mb-5">
-          FAQs
+          My Blogs
         </h2>
         <div className="h-2 w-20 bg-yellow-400 rounded-tl-2xl rounded-br-2xl mx-auto mb-10"></div>
         <div className="mx-auto w-100">
           <ul class="flex items-start  justify-center gap-8 flex-wrap w-full  mx-auto">
             <li class="w-2/5 bg-slate-50 px-5 py-5 rounded-lg shadow-lg my-2">
-              <p class="text-lg font-medium leading-6 text-gray-900">
-                1. Difference between authorization and authentication
+              <p class="text-xl text-success font-medium leading-6 text-gray-900">
+                1. The differences between uncontrolled and controlled components:
               </p>
               <p class="mt-2">
                 <p class="text-base leading-6 text-gray-500 mb-3">
-                  Authentication is the process of verifying the identity of a
-                  person or device. A common example is entering a username and
-                  password when you log in to a website. Entering the correct
-                  login information lets the website know 1) who you are and 2)
-                  that it is actually you accessing the website
+                  In React, controlled components refer to components that have their state and behavior controlled by the parent component. These components rely on props passed down from the parent component to update their state and behavior. Uncontrolled components refer to components that manage their own state internally.
                 </p>
                 <p class="text-base leading-6 text-gray-500 mb-3">
-                  Authorization is the process of giving someone the ability to
-                  access a resource. A good example is house ownership. The
-                  owner has full access rights to the property (the resource)
-                  but can grant other people the right to access it. You say
-                  that the owner authorizes people to access it. This simple
-                  example allows us to introduce a few concepts in the
-                  authorization context.
+                  They use a ref to access the DOM element's current value and update the state accordingly.
+
+                  A controlled functional component is a component that receives its current value and update callback via props. For example, consider a simple form that accepts an email address and a password:
                 </p>
               </p>
             </li>
             <li class="w-2/5 bg-slate-50 px-5 py-5 rounded-lg shadow-lg my-2">
-              <p class="text-lg font-medium leading-6 text-gray-900">
-                2. Why we are using firebase?
+              <p class="text-xl text-success font-medium leading-6 text-gray-900">
+                2. How to validate React props using PropTypes?
+              </p>
+              <p class="mt-2">
+                <p class="text-base leading-6 text-gray-500">
+                  To validate React props using PropTypes, we need to install the prop-types library, import it, and define the propTypes property on our component class, specifying the expected data types and shapes for each prop.
+                </p>
+              </p>
+            </li>
+            <li class="w-2/5 bg-slate-50 px-5 py-5 rounded-lg shadow-lg my-2">
+              <p class="text-xl text-success font-medium leading-6 text-gray-900">
+                3. The difference between nodejs and express js.
+              </p>
+              <p class="mt-2">
+                <p class="text-base leading-6 text-gray-500">
+                  Express JS is a Node. js framework designed to build API's web applications cross-platform mobile apps quickly and make node js easy.
+                  Express is a minimal and flexible node. js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications. On the other hand, Node. js is detailed as "A platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications".
+                </p>
+              </p>
+            </li>
+            <li class="w-2/5 bg-slate-50 px-5 py-5 rounded-lg shadow-lg my-2">
+              <p class="text-xl text-success font-medium leading-6 text-gray-900">
+                4. What is a custom hook, and why will you create a custom hook?
               </p>
               <p class="mt-2">
                 <p class="text-base leading-6 text-gray-500">
@@ -45,24 +58,6 @@ const Blogs = () => {
                   prototyping tool. Firebase is simple, lightweight, friendly,
                   and industrially recognized.
                 </p>
-              </p>
-            </li>
-            <li class="w-2/5 bg-slate-50 px-5 py-5 rounded-lg shadow-lg my-2">
-              <p class="text-lg font-medium leading-6 text-gray-900">
-                3. What other services does firebase provide?
-              </p>
-              <p class="mt-2">
-                <p class="text-base leading-6 text-gray-500">
-                  There are many services which Firebase provides, Most useful
-                  of them are:
-                </p>
-                <h5 className="text-lg text-gray-500">* Authentication</h5>
-                <h5 className="text-lg text-gray-500">* Firebase Hosting</h5>
-                <h5 className="text-lg text-gray-500">* Cloud Firestore</h5>
-                <h5 className="text-lg text-gray-500">* Cloud Storage</h5>
-                <h5 className="text-lg text-gray-500">* Google Analytics</h5>
-                <h5 className="text-lg text-gray-500">* Cloud Messaging</h5>
-                <h5 className="text-lg text-gray-500">* many more services</h5>
               </p>
             </li>
           </ul>
