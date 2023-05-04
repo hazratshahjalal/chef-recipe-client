@@ -1,28 +1,51 @@
-import React, { useContext } from 'react';
-import "./Header.css"
+import React from 'react';
+import './Header.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-
   return (
     <div>
       {/* Navigation Bar */}
       <Navbar bg="success" variant="dark">
         <Container>
           {/* Logo */}
-          <h3 className='text-white d-flex items-center justify-content-center'> <a href="/">Mister Kitchen</a> </h3>
+          <h3 className="text-white d-flex items-center justify-content-center">
+            <NavLink to="/">Mister Kitchen</NavLink>
+          </h3>
           {/* Navigation Links */}
           <Nav className="mx-auto">
-            <Nav.Item className='d-flex'>
-              <Link className='text-dark' to="/blogs">Home</Link>
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="blogs">Blogs</Nav.Link>
+            <Nav.Item className="d-flex">
+              <NavLink
+                exact
+                to="/"
+                className="nav-link"
+                activeClassName="active"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/blogs"
+                className="nav-link"
+                activeClassName="active"
+              >
+                Blogs
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="nav-link"
+                activeClassName="active"
+              >
+                About
+              </NavLink>
             </Nav.Item>
           </Nav>
           {/* Login Button */}
-          {/* <h3 >{user.displayName}</h3> */}
-          <button className='btn btn-light ms-3'> <Link className='text-success' to='/login'>Login</Link> </button>
+          <button className="btn btn-light ms-3">
+            <NavLink to="/login" className="text-success">
+              Login
+            </NavLink>
+          </button>
         </Container>
       </Navbar>
       <br />
