@@ -48,6 +48,7 @@ const Home = () => {
                 <Card.Img variant="top" src={chef.picture} />
                 <Card.Body>
                   <Card.Title className="chef-name text-success">{chef.name}</Card.Title>
+                  <Card.Header >{chef.bio}</Card.Header>
                   <Card.Text className="chef-card-text">
                     <span className="chef-detail">Years of Experience:</span> {chef.experience}
                     <br />
