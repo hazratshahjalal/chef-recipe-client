@@ -7,7 +7,6 @@
 - Create blogs page and add some questions and answers
 - Host website live in firebase hosting
 
-## Live site link
 
 ## Live site link
 
