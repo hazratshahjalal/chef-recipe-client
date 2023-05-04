@@ -1,0 +1,37 @@
+.chef-card-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.chef-heading {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.chef-card-row {
+  margin: 0 -10px;
+}
+
+.chef-card-col {
+  padding: 10px;
+}
+
+.chef-card {
+  margin-bottom: 20px;
+}
+
+.chef-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.chef-detail {
+  font-weight: bold;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 250px;
+}

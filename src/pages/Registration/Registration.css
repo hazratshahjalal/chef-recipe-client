@@ -1,0 +1,30 @@
+.registration-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.login-link {
+  margin-top: 20px;
+}
+
+@media (min-width: 576px) {
+  .registration-page {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

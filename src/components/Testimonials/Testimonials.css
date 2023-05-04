@@ -1,0 +1,26 @@
+.testimonials {
+  padding: 4rem 0;
+  background-color: #f7f7f7;
+}
+
+.testimonial-card {
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.testimonial-author {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: right;
+}
