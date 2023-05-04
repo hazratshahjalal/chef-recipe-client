@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./Header.css"
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
 
 const Header = () => {
+
   return (
     <div>
       {/* Navigation Bar */}
@@ -20,6 +21,7 @@ const Header = () => {
             </Nav.Item>
           </Nav>
           {/* Login Button */}
+          {/* <h3 >{user.displayName}</h3> */}
           <button className='btn btn-light ms-3'> <Link className='text-success' to='/login'>Login</Link> </button>
         </Container>
       </Navbar>

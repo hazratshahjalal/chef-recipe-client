@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import app from '../../firebase/firebase.config';
 
 
@@ -47,6 +47,7 @@ const Login = () => {
             <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
+
               placeholder="Enter email"
               // value={email}
               required
@@ -60,7 +61,6 @@ const Login = () => {
               placeholder="Password"
               // value={password}
               required
-
             />
           </Form.Group>
 
