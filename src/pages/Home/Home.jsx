@@ -58,7 +58,7 @@ const Home = () => {
                     <Card.Title className="chef-name text-success">{chef.name}</Card.Title>
 
                     <Card.Text className="chef-card-text">
-                      <span className="chef-detail">Years of Experience:</span> {chef.experience}
+                      <span className="chef-detail ">Years of Experience:</span>{chef.experience}
                       <br />
                       <span className="chef-detail">Number of Recipes:</span> {chef.numRecipes}
                       <br />

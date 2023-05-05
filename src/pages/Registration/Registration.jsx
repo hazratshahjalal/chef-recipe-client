@@ -25,23 +25,22 @@ const Registration = () => {
     createUserWithEmailAndPassword(auth, email, password, name)
       .then((userCredential) => {
         // Signed in 
-        const loggedInUser = userCredential.user;
+        const registeredUser = userCredential.user;
         setPassError('')
         setName('')
         setEmail('')
         setPassword('')
         setPhotoURL('')
         setSuccessMessage("User has been created successfully")
-        console.log(loggedInUser)
+        console.log(registeredUser)
         // ...
       })
       .catch((error) => {
         console.error(error)
         setPassError(error.message)
         setSuccessMessage('')
-
-
       });
+
 
   };
 
