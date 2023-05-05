@@ -21,7 +21,8 @@ const Login = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    signInWithEmailAndPassword(auth, email, password, name)
+    setSuccessMessage('')
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
         const loggedUser = userCredential.user;
@@ -124,8 +125,6 @@ const Login = () => {
         <p className="mt-3">
           Don't have an account? <Link to="/registration"><span className='text-success'>Sign up</span></Link>
         </p>
-        <p className="text-success">{successMessage}</p>
-        <p className="text-danger">{passError}</p>
       </Col>
     </Row>
   );
