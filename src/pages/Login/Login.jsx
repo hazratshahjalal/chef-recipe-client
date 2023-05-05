@@ -13,6 +13,18 @@ const Login = () => {
 
   const auth = getAuth(app)
 
+  const googleProvider = new GoogleAuthProvider();
+  const HandleGoogleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+      })
+      .catch(
+    )
+  }
+
+
   const githubProvider = new GithubAuthProvider();
   const handleGithubSignIn = () => {
     signInWithPopup(auth, githubProvider)
@@ -25,16 +37,6 @@ const Login = () => {
     )
   }
 
-  const googleProvider = new GoogleAuthProvider();
-  const HandleGoogleSignIn = () => {
-    signInWithPopup(auth, googleProvider)
-      .then(result => {
-        const user = result.user;
-        console.log(user)
-      })
-      .catch(
-    )
-  }
 
 
   return (

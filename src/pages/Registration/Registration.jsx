@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import './Registration.css'
 import { Form, Button } from 'react-bootstrap';
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import app from '../../firebase/firebase.config';
+
+const auth = getAuth();
 
 const Registration = () => {
   const [name, setName] = useState('');
@@ -10,32 +13,37 @@ const Registration = () => {
   const [password, setPassword] = useState('');
   const [photoURL, setPhotoURL] = useState('');
 
+  const [passError, setPassError] = useState('')
+  const [successMessage, setSuccessMessage] = useState('')
+
   const handleRegister = (event) => {
     event.preventDefault();
-    const form = event.target;
-    const name = form.name.value;
 
-    console.log(name)
-    // handle form submission logic here
+
+
+
+    createUserWithEmailAndPassword(auth, email, password, name)
+      .then((userCredential) => {
+        // Signed in 
+        const loggedInUser = userCredential.user;
+        setPassError('')
+        setName('')
+        setEmail('')
+        setPassword('')
+        setPhotoURL('')
+        setSuccessMessage("User has been created successfully")
+        console.log(loggedInUser)
+        // ...
+      })
+      .catch((error) => {
+        console.error(error)
+        setPassError(error.message)
+        setSuccessMessage('')
+
+
+      });
 
   };
-
-  const auth = getAuth();
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      console.log(user)
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // ..
-    });
-
-
-
 
   return (
     <div className="registration-page">
@@ -46,7 +54,6 @@ const Registration = () => {
           <Form.Control
             type="text"
             placeholder="Enter your name"
-            name="name"
             value={name}
             onChange={(event) => setName(event.target.value)}
             required
@@ -59,7 +66,6 @@ const Registration = () => {
             type="email"
             placeholder="Enter email"
             value={email}
-            email='email'
             onChange={(event) => setEmail(event.target.value)}
             required
           />
@@ -77,7 +83,7 @@ const Registration = () => {
             pattern="(?=.{6,}"
           />
           <Form.Text className="text-danger">
-            Password must be at least 6 characters long .
+            {passError}
           </Form.Text>
         </Form.Group>
 
@@ -96,6 +102,10 @@ const Registration = () => {
         <Button variant="success" type="submit">
           Submit
         </Button>
+
+        <Form.Text className="text-success">
+          {successMessage}
+        </Form.Text>
       </Form>
 
       <div className="login-link">
